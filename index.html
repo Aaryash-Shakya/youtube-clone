@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="media/img/youtube-logo-final.png" type="image/png">
+    <title>YouTube Clone</title>
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- bootstrap css cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/d6c2674d8b.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+
+
+
+        <div class="left">
+            <ul class="left-navbar-nav">
+                <li class="nav-item">
+                    <a href="#">
+                        <!-- * youtube home icon active-->
+                        <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
+                            class="style-scope yt-icon"
+                            style="pointer-events: none; display: block; width: 100%; height: 100%;">
+                            <g class="style-scope yt-icon">
+                                <path d="M12,4.33l7,6.12V20H15V14H9v6H5V10.45l7-6.12M12,3,4,10V21h6V15h4v6h6V10L12,3Z"
+                                    class="style-scope yt-icon"></path>
+                            </g>
+                        </svg>
+                        <p>Home</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#">
+                        <!-- * youtube shorts icon -->
+                        <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
+                            class="style-scope yt-icon"
+                            style="pointer-events: none; display: block; width: 100%; height: 100%;">
+                            <g height="24" viewBox="0 0 24 24" width="24" class="style-scope yt-icon">
+                                <path
+                                    d="M10 14.65v-5.3L15 12l-5 2.65zm7.77-4.33c-.77-.32-1.2-.5-1.2-.5L18 9.06c1.84-.96 2.53-3.23 1.56-5.06s-3.24-2.53-5.07-1.56L6 6.94c-1.29.68-2.07 2.04-2 3.49.07 1.42.93 2.67 2.22 3.25.03.01 1.2.5 1.2.5L6 14.93c-1.83.97-2.53 3.24-1.56 5.07.97 1.83 3.24 2.53 5.07 1.56l8.5-4.5c1.29-.68 2.06-2.04 1.99-3.49-.07-1.42-.94-2.68-2.23-3.25zm-.23 5.86l-8.5 4.5c-1.34.71-3.01.2-3.72-1.14-.71-1.34-.2-3.01 1.14-3.72l2.04-1.08v-1.21l-.69-.28-1.11-.46c-.99-.41-1.65-1.35-1.7-2.41-.05-1.06.52-2.06 1.46-2.56l8.5-4.5c1.34-.71 3.01-.2 3.72 1.14.71 1.34.2 3.01-1.14 3.72L15.5 9.26v1.21l1.8.74c.99.41 1.65 1.35 1.7 2.41.05 1.06-.52 2.06-1.46 2.56z"
+                                    class="style-scope yt-icon"></path>
+                            </g>
+                        </svg>
+                        <p>Short</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#">
+                        <!-- * youtube subscription icon -->
+                        <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
+                            class="style-scope yt-icon"
+                            style="pointer-events: none; display: block; width: 100%; height: 100%;">
+                            <g class="style-scope yt-icon">
+                                <path
+                                    d="M10,18v-6l5,3L10,18z M17,3H7v1h10V3z M20,6H4v1h16V6z M22,9H2v12h20V9z M3,10h18v10H3V10z"
+                                    class="style-scope yt-icon"></path>
+                            </g>
+                        </svg>
+                        <p>Subscription</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#">
+                        <!-- * youtube library icon -->
+                        <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
+                            class="style-scope yt-icon"
+                            style="pointer-events: none; display: block; width: 100%; height: 100%;">
+                            <g class="style-scope yt-icon">
+                                <path
+                                    d="M11,7l6,3.5L11,14V7L11,7z M18,20H4V6H3v15h15V20z M21,18H6V3h15V18z M7,17h13V4H7V17z"
+                                    class="style-scope yt-icon"></path>
+                            </g>
+                        </svg>
+                        <p>Library</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="right">
+
+            <nav class="navbar top-navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                    <button class="side-navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=""
+                        aria-controls="" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <a class="navbar-brand ms-0 me-auto" href="#">
+                        <img src="media/img/YouTube-Logo.png" alt="">
+                    </a>
+                    <!-- ! search -->
+                    <form class="d-flex me-auto ms-auto navbar-search-form" role="search">
+                        <div class="navbar-search-container">
+                            <input class="form-control navbar-search-text" type="search" placeholder="Search"
+                                aria-label="Search">
+                            <button class="btn navbar-search-button" type="submit">
+                                <i class="fa fa-light fa-magnifying-glass"></i>
+                            </button>
+                        </div>
+                    </form>
+
+
+                    <ul class="navbar-nav me-0 mb-2">
+
+                        <!-- ! create -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" role="button">
+                                <i class="fa fa-light fa-video"></i>
+                            </a>
+                        </li>
+
+                        <!-- ! notification -->
+                        <li class="nav-item dropstart">
+                            <a class="nav-link dropdown" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class="fa fa-regular fa-bell"></i>
+                                <span
+                                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                    99+
+                                    <span class="visually-hidden">unread messages</span>
+                                    <!-- <i class="fa-solid fa-bell fa-shake"></i> -->
+                            </a>
+                            <ul class="dropdown-menu notification-dropdown">
+                                <!-- TODO figure out of navbar-nav-scroll does anything good -->
+                                <!-- TODO dont use that unless u figure out the height content solution -->
+                                <li class="notification-dropdown-header p-3">
+                                    Notification
+                                    <a href="#">
+                                        <i class="fa fa-light fa-gear"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <!-- *sample notification ludwig -->
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-2">
+                                                    <img class="notification-channel-logo"
+                                                        src="media/img/sample-channel-logo1.jpg" alt="">
+                                                </div>
+                                                <div class="col-7">
+                                                    <div class="notification-video-title">
+                                                        <h6>FINAL HOUR... SURVIVAL NOT GUARANTEED</h6>
+                                                        <p>1 day ago</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-3">
+                                                    <img class="notification-video-thumbnail"
+                                                        src="media/img/sample-video-thumbnail1.webp" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <!-- *sample notification itztimmy -->
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-2">
+                                                    <img class="notification-channel-logo"
+                                                        src="media/img/sample-channel-logo2.jpg" alt="">
+                                                </div>
+                                                <div class="col-7">
+                                                    <div class="notification-video-title">
+                                                        <h6>THE NEMESIS IS THE BEST GUN IN APEX BY FAR (THIS IS
+                                                            WHY)FINAL HOUR... SURVIVAL NOT GUARANTEED</h6>
+                                                        <p>17 hours ago</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-3">
+                                                    <img class="notification-video-thumbnail"
+                                                        src="media/img/sample-video-thumbnail2.webp" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <!-- *sample notification chris heria -->
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-2">
+                                                    <img class="notification-channel-logo"
+                                                        src="media/img/sample-channel-logo3.jpg" alt="">
+                                                </div>
+                                                <div class="col-7">
+                                                    <div class="notification-video-title">
+                                                        <h6>HOW TO MUSCLE UP - THE BEST WAY</h6>
+                                                        <p>3 years ago</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-3">
+                                                    <img class="notification-video-thumbnail"
+                                                        src="media/img/sample-video-thumbnail3.webp" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <!-- *sample notification ludwig -->
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-2">
+                                                    <img class="notification-channel-logo"
+                                                        src="media/img/sample-channel-logo1.jpg" alt="">
+                                                </div>
+                                                <div class="col-7">
+                                                    <div class="notification-video-title">
+                                                        <h6>FINAL HOUR... SURVIVAL NOT GUARANTEED</h6>
+                                                        <p>1 day ago</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-3">
+                                                    <img class="notification-video-thumbnail"
+                                                        src="media/img/sample-video-thumbnail1.webp" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <!-- *sample notification itztimmy -->
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-2">
+                                                    <img class="notification-channel-logo"
+                                                        src="media/img/sample-channel-logo2.jpg" alt="">
+                                                </div>
+                                                <div class="col-7">
+                                                    <div class="notification-video-title">
+                                                        <h6>THE NEMESIS IS THE BEST GUN IN APEX BY FAR (THIS IS
+                                                            WHY)FINAL HOUR... SURVIVAL NOT GUARANTEED</h6>
+                                                        <p>17 hours ago</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-3">
+                                                    <img class="notification-video-thumbnail"
+                                                        src="media/img/sample-video-thumbnail2.webp" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <!-- *sample notification chris heria -->
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-2">
+                                                    <img class="notification-channel-logo"
+                                                        src="media/img/sample-channel-logo3.jpg" alt="">
+                                                </div>
+                                                <div class="col-7">
+                                                    <div class="notification-video-title">
+                                                        <h6>HOW TO MUSCLE UP - THE BEST WAY</h6>
+                                                        <p>3 years ago</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-3">
+                                                    <img class="notification-video-thumbnail"
+                                                        src="media/img/sample-video-thumbnail3.webp" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <!-- ! account -->
+                        <li class="nav-item dropstart">
+                            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa fa-regular fa-user"></i>
+                            </a>
+                            <ul class="dropdown-menu profile-dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item profile-info" href="#">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-2">
+                                                    <img src="media/img/sample-channel-logo1.jpg" alt="">
+                                                </div>
+                                                <div class="col-9">
+                                                    <p class="username">Sample Sample</p>
+                                                    <p class="email">sample@gmail.com</p>
+                                                    <!-- <a class ="account-settings" href="#"> -->
+                                                    <p class="">Manage your Google Account</p>
+                                                    <!-- </a> -->
+                                                </div>
+                                                <div class="col-1">
+
+                                                </div>
+
+
+
+                                                <!-- <div class="col-2">
+                                                    <img src="media/img/sample-channel-logo1.jpg" alt="">
+                                                </div>
+                                                <div class="col-9">
+                                                    <p class="username">Sample Sample</p>
+                                                    <p class="email">sample@gmail.com</p>
+                                                    <a href="#">
+                                                        <p class="fs-6">Manage your Google Account</p>
+                                                    </a>
+                                                </div>
+                                                <div class="col-1"></div> -->
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+
+                                <li><a class="dropdown-item" href="#">Your channel</a></li>
+                                <li><a class="dropdown-item" href="#">Your channel</a></li>
+                                <li><a class="dropdown-item" href="#">Your channel</a></li>
+                                <li><a class="dropdown-item" href="#">Your channel</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Purchase and membership</a></li>
+                                <li><a class="dropdown-item" href="#">Purchase and membership</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                </div>
+            </nav>
+
+            <div class="filter-bar">
+
+            </div>
+            <div class="container-fluid gx-lg-5 gx-md-3">
+                <div class="row gx-3 gy-6">
+                    <!-- *sample ludwig -->
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                        <div class="video-box p-2">
+                            <img class="video-box-video-thumbnail" src="media/img/sample-video-thumbnail1.webp" alt="">
+                            <div class="container-fluid p-2 video-box-info">
+                                <div class="row">
+                                    <div class="col-2">
+                                        <img class="video-box-channel-logo" src="media/img/sample-channel-logo1.jpg"
+                                            alt="">
+                                    </div>
+                                    <div class="col-9 video-box-text">
+                                        <a href="#">
+                                            <h6>FINAL HOUR... SURVIVAL NOT GUARANTEED</h6>
+                                        </a>
+                                        <a href="#">
+                                            <p class="video-box-channel-name">Ludwig</p>
+                                        </a>
+                                        <p>626K views . 1 day ago</p>
+                                    </div>
+                                    <div class="col-1">
+                                        <i class="fa fa-solid fa-ellipsis-vertical video-box-option"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- * sample timmy -->
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                        <div class="video-box p-2">
+                            <img class="video-box-video-thumbnail" src="media/img/sample-video-thumbnail2.webp" alt="">
+                            <div class="container-fluid p-2 video-box-info">
+                                <div class="row">
+                                    <div class="col-2">
+                                        <img class="video-box-channel-logo" src="media/img/sample-channel-logo2.jpg"
+                                            alt="">
+                                    </div>
+                                    <div class="col-9 video-box-text">
+                                        <a href="#">
+                                            <h6>THE NEMESIS IS THE BEST GUN IN APEX BY FAR (THIS IS WHY)</h6>
+                                        </a>
+                                        <a href="#">
+                                            <p class="video-box-channel-name">iiTzTimmy</p>
+                                        </a>
+                                        <p>131K views . 17 hour ago</p>
+                                    </div>
+                                    <div class="col-1">
+                                        <i class="fa fa-solid fa-ellipsis-vertical video-box-option"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- * sample chris heria -->
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                        <div class="video-box p-2">
+                            <img class="video-box-video-thumbnail" src="media/img/sample-video-thumbnail3.webp" alt="">
+                            <div class="container-fluid p-2 video-box-info">
+                                <div class="row">
+                                    <div class="col-2">
+                                        <img class="video-box-channel-logo" src="media/img/sample-channel-logo3.jpg"
+                                            alt="">
+                                    </div>
+                                    <div class="col-9 video-box-text">
+                                        <a href="#">
+                                            <h6>HOW TO MUSCLE UP - THE BEST WAY</h6>
+                                        </a>
+                                        <a href="#">
+                                            <p class="video-box-channel-name">CHRIS HERIA</p>
+                                        </a>
+                                        <p>2.2M views . 3 year ago</p>
+                                    </div>
+                                    <div class="col-1">
+                                        <i class="fa fa-solid fa-ellipsis-vertical video-box-option"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- *sample ludwig -->
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                        <div class="video-box p-2">
+                            <img class="video-box-video-thumbnail" src="media/img/sample-video-thumbnail1.webp" alt="">
+                            <div class="container-fluid p-2 video-box-info">
+                                <div class="row">
+                                    <div class="col-2">
+                                        <img class="video-box-channel-logo" src="media/img/sample-channel-logo1.jpg"
+                                            alt="">
+                                    </div>
+                                    <div class="col-9 video-box-text">
+                                        <a href="#">
+                                            <h6>FINAL HOUR... SURVIVAL NOT GUARANTEED</h6>
+                                        </a>
+                                        <a href="#">
+                                            <p class="video-box-channel-name">Ludwig</p>
+                                        </a>
+                                        <p>626K views . 1 day ago</p>
+                                    </div>
+                                    <div class="col-1">
+                                        <i class="fa fa-solid fa-ellipsis-vertical video-box-option"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- * sample timmy -->
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                        <div class="video-box p-2">
+                            <img class="video-box-video-thumbnail" src="media/img/sample-video-thumbnail2.webp" alt="">
+                            <div class="container-fluid p-2 video-box-info">
+                                <div class="row">
+                                    <div class="col-2">
+                                        <img class="video-box-channel-logo" src="media/img/sample-channel-logo2.jpg"
+                                            alt="">
+                                    </div>
+                                    <div class="col-9 video-box-text">
+                                        <a href="#">
+                                            <h6>THE NEMESIS IS THE BEST GUN IN APEX BY FAR (THIS IS WHY)</h6>
+                                        </a>
+                                        <a href="#">
+                                            <p class="video-box-channel-name">iiTzTimmy</p>
+                                        </a>
+                                        <p>131K views . 17 hour ago</p>
+                                    </div>
+                                    <div class="col-1">
+                                        <i class="fa fa-solid fa-ellipsis-vertical video-box-option"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- * sample chris heria -->
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                        <div class="video-box p-2">
+                            <img class="video-box-video-thumbnail" src="media/img/sample-video-thumbnail3.webp" alt="">
+                            <div class="container-fluid p-2 video-box-info">
+                                <div class="row">
+                                    <div class="col-2">
+                                        <img class="video-box-channel-logo" src="media/img/sample-channel-logo3.jpg"
+                                            alt="">
+                                    </div>
+                                    <div class="col-9 video-box-text">
+                                        <a href="#">
+                                            <h6>HOW TO MUSCLE UP - THE BEST WAY</h6>
+                                        </a>
+                                        <a href="#">
+                                            <p class="video-box-channel-name">CHRIS HERIA</p>
+                                        </a>
+                                        <p>2.2M views . 3 year ago</p>
+                                    </div>
+                                    <div class="col-1">
+                                        <i class="fa fa-solid fa-ellipsis-vertical video-box-option"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- *sample ludwig -->
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                        <div class="video-box p-2">
+                            <img class="video-box-video-thumbnail" src="media/img/sample-video-thumbnail1.webp" alt="">
+                            <div class="container-fluid p-2 video-box-info">
+                                <div class="row">
+                                    <div class="col-2">
+                                        <img class="video-box-channel-logo" src="media/img/sample-channel-logo1.jpg"
+                                            alt="">
+                                    </div>
+                                    <div class="col-9 video-box-text">
+                                        <a href="#">
+                                            <h6>FINAL HOUR... SURVIVAL NOT GUARANTEED</h6>
+                                        </a>
+                                        <a href="#">
+                                            <p class="video-box-channel-name">Ludwig</p>
+                                        </a>
+                                        <p>626K views . 1 day ago</p>
+                                    </div>
+                                    <div class="col-1">
+                                        <i class="fa fa-solid fa-ellipsis-vertical video-box-option"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- * sample timmy -->
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                        <div class="video-box p-2">
+                            <img class="video-box-video-thumbnail" src="media/img/sample-video-thumbnail2.webp" alt="">
+                            <div class="container-fluid p-2 video-box-info">
+                                <div class="row">
+                                    <div class="col-2">
+                                        <img class="video-box-channel-logo" src="media/img/sample-channel-logo2.jpg"
+                                            alt="">
+                                    </div>
+                                    <div class="col-9 video-box-text">
+                                        <a href="#">
+                                            <h6>THE NEMESIS IS THE BEST GUN IN APEX BY FAR (THIS IS WHY)</h6>
+                                        </a>
+                                        <a href="#">
+                                            <p class="video-box-channel-name">iiTzTimmy</p>
+                                        </a>
+                                        <p>131K views . 17 hour ago</p>
+                                    </div>
+                                    <div class="col-1">
+                                        <i class="fa fa-solid fa-ellipsis-vertical video-box-option"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- * sample chris heria -->
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                        <div class="video-box p-2">
+                            <img class="video-box-video-thumbnail" src="media/img/sample-video-thumbnail3.webp" alt="">
+                            <div class="container-fluid p-2 video-box-info">
+                                <div class="row">
+                                    <div class="col-2">
+                                        <img class="video-box-channel-logo" src="media/img/sample-channel-logo3.jpg"
+                                            alt="">
+                                    </div>
+                                    <div class="col-9 video-box-text">
+                                        <a href="#">
+                                            <h6>HOW TO MUSCLE UP - THE BEST WAY</h6>
+                                        </a>
+                                        <a href="#">
+                                            <p class="video-box-channel-name">CHRIS HERIA</p>
+                                        </a>
+                                        <p>2.2M views . 3 year ago</p>
+                                    </div>
+                                    <div class="col-1">
+                                        <i class="fa fa-solid fa-ellipsis-vertical video-box-option"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- *sample ludwig -->
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                        <div class="video-box p-2">
+                            <img class="video-box-video-thumbnail" src="media/img/sample-video-thumbnail1.webp" alt="">
+                            <div class="container-fluid p-2 video-box-info">
+                                <div class="row">
+                                    <div class="col-2">
+                                        <img class="video-box-channel-logo" src="media/img/sample-channel-logo1.jpg"
+                                            alt="">
+                                    </div>
+                                    <div class="col-9 video-box-text">
+                                        <a href="#">
+                                            <h6>FINAL HOUR... SURVIVAL NOT GUARANTEED</h6>
+                                        </a>
+                                        <a href="#">
+                                            <p class="video-box-channel-name">Ludwig</p>
+                                        </a>
+                                        <p>626K views . 1 day ago</p>
+                                    </div>
+                                    <div class="col-1">
+                                        <i class="fa fa-solid fa-ellipsis-vertical video-box-option"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- * sample timmy -->
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                        <div class="video-box p-2">
+                            <img class="video-box-video-thumbnail" src="media/img/sample-video-thumbnail2.webp" alt="">
+                            <div class="container-fluid p-2 video-box-info">
+                                <div class="row">
+                                    <div class="col-2">
+                                        <img class="video-box-channel-logo" src="media/img/sample-channel-logo2.jpg"
+                                            alt="">
+                                    </div>
+                                    <div class="col-9 video-box-text">
+                                        <a href="#">
+                                            <h6>THE NEMESIS IS THE BEST GUN IN APEX BY FAR (THIS IS WHY)</h6>
+                                        </a>
+                                        <a href="#">
+                                            <p class="video-box-channel-name">iiTzTimmy</p>
+                                        </a>
+                                        <p>131K views . 17 hour ago</p>
+                                    </div>
+                                    <div class="col-1">
+                                        <i class="fa fa-solid fa-ellipsis-vertical video-box-option"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- * sample chris heria -->
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                        <div class="video-box p-2">
+                            <img class="video-box-video-thumbnail" src="media/img/sample-video-thumbnail3.webp" alt="">
+                            <div class="container-fluid p-2 video-box-info">
+                                <div class="row">
+                                    <div class="col-2">
+                                        <img class="video-box-channel-logo" src="media/img/sample-channel-logo3.jpg"
+                                            alt="">
+                                    </div>
+                                    <div class="col-9 video-box-text">
+                                        <a href="#">
+                                            <h6>HOW TO MUSCLE UP - THE BEST WAY</h6>
+                                        </a>
+                                        <a href="#">
+                                            <p class="video-box-channel-name">CHRIS HERIA</p>
+                                        </a>
+                                        <p>2.2M views . 3 year ago</p>
+                                    </div>
+                                    <div class="col-1">
+                                        <i class="fa fa-solid fa-ellipsis-vertical video-box-option"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- custom js -->
+    <script src="js/script.js"></script>
+    <!-- bootstrap js cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
